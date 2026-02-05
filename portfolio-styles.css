@@ -1,0 +1,656 @@
+/* ==================== Root Variables ==================== */
+:root {
+    --primary-brown: #8b7355;
+    --light-beige: #f5f1ed;
+    --dark-gray: #2c2c2c;
+    --text-gray: #666666;
+    --accent-color: #d4a574;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+/* ==================== Global Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ==================== Navigation ==================== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-brand .brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-brown);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-brown);
+}
+
+.nav-social {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-social a {
+    color: var(--dark-gray);
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.nav-social a:hover {
+    color: var(--primary-brown);
+}
+
+/* ==================== Hero Section ==================== */
+.hero-section {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #e8ddd3 0%, #f5f1ed 100%);
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-brand {
+    font-size: 14px;
+    color: var(--primary-brown);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--dark-gray);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-brown);
+    color: var(--white);
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-brown);
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: var(--primary-brown);
+}
+
+.hero-image {
+    position: relative;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================== Services Section ==================== */
+.services-section {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--dark-gray);
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.service-card {
+    text-align: center;
+    transition: var(--transition);
+    padding: 40px 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 60px;
+    color: var(--primary-brown);
+    margin-bottom: 30px;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    font-size: 75px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ==================== Achievements Section ==================== */
+.achievements-section {
+    padding: 120px 0;
+    background: var(--light-beige);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.achievement-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.achievement-year {
+    font-size: 14px;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.achievement-card h3 {
+    font-size: 20px;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.achievement-card p {
+    color: var(--text-gray);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ==================== Portfolio Section ==================== */
+.portfolio-section {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.portfolio-item {
+    background: var(--light-beige);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image {
+    height: 280px;
+    background: linear-gradient(135deg, #c9b39e 0%, #d4a574 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-image {
+    background: linear-gradient(135deg, #a8935e 0%, #b8884f 100%);
+}
+
+.portfolio-item h3 {
+    font-size: 22px;
+    color: var(--dark-gray);
+    padding: 30px 30px 10px;
+    font-weight: 700;
+}
+
+.portfolio-item p {
+    color: var(--text-gray);
+    padding: 0 30px 30px;
+    font-size: 14px;
+}
+
+.portfolio-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    text-align: center;
+    border-top: 2px solid var(--light-beige);
+    padding-top: 60px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary-brown);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* ==================== Testimonials Section ==================== */
+.testimonials-section {
+    padding: 120px 0;
+    background: var(--light-beige);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-text {
+    font-size: 16px;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.testimonial-author {
+    border-top: 2px solid var(--light-beige);
+    padding-top: 20px;
+}
+
+.author-name {
+    font-size: 16px;
+    color: var(--dark-gray);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.author-title {
+    font-size: 13px;
+    color: var(--text-gray);
+}
+
+/* ==================== Skills Section ==================== */
+.skills-section {
+    padding: 120px 0;
+    background: var(--white);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: var(--light-beige);
+    color: var(--primary-brown);
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.skill-tag:hover {
+    background: var(--primary-brown);
+    color: var(--white);
+    border-color: var(--primary-brown);
+}
+
+/* ==================== Contact Section ==================== */
+.contact-section {
+    padding: 120px 0;
+    background: var(--light-beige);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-item {
+    display: flex;
+    gap: 25px;
+}
+
+.info-item i {
+    font-size: 32px;
+    color: var(--primary-brown);
+    width: 50px;
+}
+
+.info-item h4 {
+    font-size: 16px;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.info-item a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.info-item a:hover {
+    color: var(--primary-brown);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 2px solid #e0d7cf;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-brown);
+    background-color: rgba(139, 115, 85, 0.02);
+}
+
+.submit-btn {
+    padding: 16px 40px;
+    background: var(--primary-brown);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 15px;
+}
+
+.submit-btn:hover {
+    background: var(--accent-color);
+}
+
+/* ==================== Footer ==================== */
+.footer {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .container-wide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: var(--white);
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 1024px) {
+    .container-wide {
+        padding: 0 30px;
+    }
+
+    .services-grid,
+    .achievements-grid,
+    .portfolio-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .container-wide {
+        padding: 0 20px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .services-grid,
+    .achievements-grid,
+    .portfolio-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+        margin-top: 70px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .portfolio-stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer .container-wide {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .nav-brand .brand-name {
+        font-size: 18px;
+    }
+
+    .services-section,
+    .achievements-section,
+    .portfolio-section,
+    .testimonials-section,
+    .skills-section,
+    .contact-section {
+        padding: 60px 0;
+    }
+}
